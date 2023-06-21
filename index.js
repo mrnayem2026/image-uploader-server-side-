@@ -82,7 +82,7 @@ async function run() {
     });
 
     // ! get All Images**  
-    app.get('/uploade_image', async (req, res) => {
+    app.get('/uploade_images', async (req, res) => {
       const result = await imagesCollection.find().toArray();
       res.send(result);
   })
