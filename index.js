@@ -81,6 +81,11 @@ async function run() {
       res.send({ success: true, data: result });
     });
 
+    // ! get All Images**  
+    app.get('/uploade_image', async (req, res) => {
+      const result = await imagesCollection.find().toArray();
+      res.send(result);
+  })
   
 
     app.get("/", (req, res) => {
